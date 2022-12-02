@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Francis | Micro:Hero</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="scripter.js"></script>
+</head>
+<body>
+    <header id="header">
+        <a tabindex="0" href="index.html" id="home-button">Home</a>
+        <nav role="navigation" id="header-links">
+            <a tabindex="1" href="#ProjectOverview-anchor">Project Overview</a>
+            <a tabindex="2" href="#ImportantFeatures-anchor">Important Features</a>
+            <a tabindex="3" href="resume.pdf">Resume</a>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="TopImage">
+            <img src="micro.jpg" alt="Image of Micro:Hero project" id="projectImage">
+
+        </section>
+        <section id="ProjectOverview" class="content">
+            <a id="ProjectOverview-anchor" class="anchor"></a>
+            <h1 class="sectionHead">Micro:Hero</h1>
+            <p id="OverviewParagraph">
+                The micro:hero is a 
+            labor of love Guitar Hero emulation that uses the BBC
+            Microbit v2 board. The gameplay loop is as follows: The 
+            console has five light-up buttons. When the game starts, 
+            the buttons will light up in a sequence, one button at a time.
+            When a button lights up, the player will have a short amount
+            of time to press the button that lit up(and only that button),
+            or a point will be deducted. When enough points are deducted,
+            game's over. If you thought that was too easy: we have a 
+            pulse sensor that attaches to the player's finger. When the
+            player's pulse goes above a certain threshold (ie: when they
+            get nervous enough) the buttons will light up in quicker 
+            succession, and the player will have less time to click the 
+            buttons before a point is deducted. Also, each button press
+            is associated with a note in the Gb pentatonic scale, so 
+            you can make beautiful music to calm yourself down
+            </p>
+
+        </section>
+        <section id="ImportantFeatures">
+            <h1 class="sectionHead">Important Features</h1>
+            <a id="ImportantFeatures-anchor"></a>
+            <div id="Microbit" class="container content">
+                <img src="microbit.webp" alt="Microbit v2 image" class="standardImage">
+                <div id="DescriptionR">
+                    <h2>Micro:bit V2</h2>
+                    <p>
+                        The Microbit was originally a result of the BBC
+                        Computer Literacy Project from the 80s. It has 
+                        since been reimagined with more modern and powerful
+                        features. It contains the Nordic Semiconductors
+                        nRF52833 microcontroller, with 512kB of flash memory and 
+                        128kB of SRAM, 
+                        an arm cortex m4f microprocessor, and many other useful peripherals.
+
+                    </p>
+                </div>
+            </div>
+            <div id="ButtonBreakouts" class="container content">
+                <div id="DescriptionL">
+                    <h2>Sparkfun Qwiic Button</h2>
+                    <p>The Sparkfun Qwiic Button is a programmable button breakout.We have our buttons
+                        configured to send information about whether they have been pressed through
+                        I2C, as well as to light up the LED on the button to indicate that the player
+                        has to press the button. We poll the buttons 10 times a second to determine whether they have been
+                        pressed within the time interval between flashes. 
+                    </p>
+                    
+                </div>
+                <img src="button.jpg" alt="photo of Sparkfun Qwiic Button" class="standardImageR">
+            </div>
+            <div id="PulseSensor" class="container content">
+                <img src="pulse.jpg" alt="photo of pulse sensor" class="standardImage">
+
+                <div id="DescriptionR">
+                    <h2>Pulse Sensor</h2>
+                    <p>The Pulse Sensor uses an optical heart rate sensor to quantify how nervous the player is. It gives
+                        analog data which is interpreted by the Successive Approximation Analog to Digital Converter aboard the 
+                        nRF52833. Above a certain threshold, the button flashes happen quicker and the player has less time to 
+                        click them. 
+                    </p>
+
+                </div>
+            </div>
+            <div id="amp" class="container content">
+                <div id="DescriptionL">
+                    <h2>Speaker Amp</h2>
+                    <p>
+                        The Speaker amp enhances the quality of the audio and applies dynamic gain
+                    </p>
+                </div>
+                <img src="amp.jpg" alt="photo of Qwiic Speaker Amp" class="standardImageR">
+            </div>
+        </section>
+        
+
+    </main>
+    
+</body>
+</html>
